@@ -1,0 +1,90 @@
+# C195
+
+## Title
+C195-Scheduler
+
+## Purpose
+Software to manage appointment system with customers, users, and reports.
+
+## Author
+Gabriel Fernandez Patak <gfern21@wgu.edu>
+
+## Application Version
+8/4/2021 Version 1.0
+
+## IDE Version
+IntelliJ IDEA 2021.2 (Community Edition)
+Build #IC-212.4746.92, built on July 27, 2021
+Runtime version: 11.0.11+9-b1504.13 amd64
+VM: OpenJDK 64-Bit Server VM by JetBrains s.r.o.
+
+## JDK Version
+corretto-11.0.11
+
+## JavaFX Version
+javafx-sdk-11.0.2
+
+## MySQL Connector Version
+mysql-connector-java-8.0.26
+
+
+## How to run app
+1) Set two libraries on your IDE:
+	a)"lib" with the JavaFX lib path.
+	b)"mysql-connector-java-8.0.26" with MySQL Connector lib path.
+2) Set Path Variable "PATH_TO_FX" with the path to the JavaFX lib. 
+
+3) You will need to confirm that you have access to the database.
+
+4) Functionalities:
+
+LOGIN MENU:	This menu has two fields to enter username and password. 
+		You can press Login to enter the program and it will verify if you have any upcoming appointments.
+
+MAIN MENU:	The left side table shows the list of customers and below towards the middle you have three buttons: Add, Modify, Delete (Customer). 
+		You have to select an item from the table to use them.
+		Add (Customer): Allows you to add a new customer. 
+		Modify (Customer): Allows you to modify an existing customer. 
+		Delete (Customer): It will delete customer and their appointments
+
+		The right side table shows the list of appointments and below you have three buttons: Add, Modify, Delete (Appointment).
+		You have to select an item from the table to use them.
+		Add (Appointment): Allows you to add a new appointment. 
+		Modify (Appointment): Allows you to modify an existing appointment. 
+		Delete (Appointment): It will delete the appointment. 
+
+		The top left has a "View reports" button that will open the report menu.
+		The top right has an "Exit" button that will close the program.
+
+		Over the Appointments table you have three radio buttons that will allow you to filter them. You can choose: all, by month or by week.
+
+REPORT MENU:	The bottom side has three buttons to show reports:
+		"Total Appointments" will display the sum of appointments by month and type.
+		"Schedule by Contact" will display all the appointments sorted by contact name.
+		"Appointments by Country" will display all the appointments and sort them by country.
+		
+		The top right has a "Menu" button that will return to the Main Menu.
+
+ADD CUSTOMER:		There are four fields to type information and two combo boxes to select the country and division.
+			The "Save" button will save the information entered.
+			The "Cancel" button will go back to the main menu.
+
+MODIFY CUSTOMER:	The fields are filled with the selected row and can be modified.
+			The "Save" button will save the information modified.
+			The "Cancel" button will go back to the main menu.
+
+ADD APPOINTMENT:	There are four fields to type information and combo boxes to choose existing information.
+			The appointment date and time can't be within the range of another appointment or outside of business hours.
+			The "Save" button will save the information entered.
+			The "Cancel" button will go back to the main menu.
+
+MODIFY APPOINTMENT:	The fields are filled with the selected row and can be modified.
+			The appointment date and time can't be within the range of another appointment or outside of business hours.
+			The "Save" button will save the information modified.
+			The "Cancel" button will go back to the main menu.
+
+
+
+## Additional Report
+
+View appointments by country.

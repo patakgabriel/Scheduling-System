@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="500.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints maxHeight="40.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="40.0" minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    </rowConstraints>
+    <children>
+        <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="500.0" />
+        <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1">
+            <children>
+                <Button fx:id="exitB" alignment="CENTER" mnemonicParsing="false" onAction="#exitButton" text="Exit" translateX="225.0" />
+            </children></StackPane>
+        <StackPane maxHeight="50.0" maxWidth="500.0" prefHeight="108.0" prefWidth="500.0" GridPane.rowIndex="1">
+         <children>
+            <Button fx:id="reportB" mnemonicParsing="false" onAction="#viewReportButton" text="View Reports" />
+         </children></StackPane>
+        <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <children>
+            <RadioButton fx:id="monthRadio" mnemonicParsing="false" onAction="#filterAppointmentTable" text="View by Month">
+               <toggleGroup>
+                  <ToggleGroup fx:id="DateFilter" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="weekRadio" mnemonicParsing="false" onAction="#filterAppointmentTable" text="View by Week" toggleGroup="$DateFilter" translateX="150.0" />
+            <RadioButton fx:id="allRadio" mnemonicParsing="false" onAction="#filterAppointmentTable" selected="true" text="View All" toggleGroup="$DateFilter" translateX="-150.0" />
+         </children></StackPane>
+        <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="2">
+            <children>
+                <TableView fx:id="customerTable" prefHeight="200.0" prefWidth="200.0">
+                    <columns>
+                        <TableColumn fx:id="customerID" prefWidth="28.0" text="ID" />
+                  <TableColumn fx:id="customerName" prefWidth="62.0" text="Name" />
+                  <TableColumn fx:id="customerAddress" prefWidth="121.0" text="Address" />
+                  <TableColumn fx:id="customerPostal" prefWidth="125.0" text="Postal Code" />
+                  <TableColumn fx:id="customerPhone" prefWidth="64.0" text="Phone" />
+                  <TableColumn fx:id="customerDivision" prefWidth="99.0" text="Division" />
+                    </columns>
+                </TableView>
+            </children>
+        </StackPane>
+        <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <children>
+                <TableView fx:id="appointmentTable" prefHeight="200.0" prefWidth="200.0">
+                    <columns>
+                        <TableColumn fx:id="appointmentID" prefWidth="55.0" text="Appt. ID" />
+                  <TableColumn fx:id="appointmentTitle" prefWidth="69.0" text="Title" />
+                  <TableColumn fx:id="appointmentDescription" prefWidth="71.0" text="Description" />
+                  <TableColumn fx:id="appointmentLocation" prefWidth="57.0" text="Location" />
+                  <TableColumn fx:id="appointmentContact" prefWidth="59.0" text="Contact" />
+                  <TableColumn fx:id="appointmentType" prefWidth="57.0" text="Type" />
+                  <TableColumn fx:id="appointmentStart" prefWidth="120.0" text="Start Date" />
+                  <TableColumn fx:id="appointmentEnd" prefWidth="120.0" text="End Date" />
+                  <TableColumn fx:id="appointmentCustomer" prefWidth="91.0" text="Customer ID" />
+                    </columns>
+                </TableView>
+            </children>
+        </StackPane>
+        <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="3">
+            <children>
+                <Button fx:id="addCustomerB" mnemonicParsing="false" onAction="#addCustomerButton" text="Add" translateX="50.0" />
+                <Button fx:id="modifyCustomerB" mnemonicParsing="false" onAction="#modifyCustomerButton" text="Modify" translateX="130.0" />
+                <Button fx:id="deleteCustomerB" mnemonicParsing="false" onAction="#deleteCustomerButton" text="Delete" translateX="210.0" />
+            </children>
+        </StackPane>
+        <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <children>
+                <Button fx:id="addAppB" mnemonicParsing="false" onAction="#addAppointmentButton" text="Add" translateX="50.0" />
+                <Button fx:id="modifyAppB" mnemonicParsing="false" onAction="#modifyAppointmentButton" text="Modify" translateX="130.0" />
+                <Button fx:id="deleteAppB" mnemonicParsing="false" onAction="#deleteAppointmentButton" text="Delete" translateX="210.0" />
+            </children></StackPane>
+    </children>
+</GridPane>

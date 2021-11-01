@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="600.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="400.0" minHeight="10.0" prefHeight="300.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    </rowConstraints>
+    <children>
+        <StackPane prefHeight="150.0" prefWidth="200.0">
+            <children>
+                <Label fx:id="addLabel" text="Add Appointment">
+                    <font>
+                        <Font name="System Bold" size="19.0" />
+                    </font>
+                </Label>
+            </children></StackPane>
+        <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="1">
+            <children>
+                <Label fx:id="idLabel" text="ID" translateX="-100.0" translateY="-100.0" />
+                <Label fx:id="titleLabel" text="Title" translateX="-100.0" translateY="-75.0" />
+                <Label fx:id="descriptionLabel" text="Description" translateX="-100.0" translateY="-50.0" />
+                <Label fx:id="locationLabel" text="Location" translateX="-100.0" translateY="-25.0" />
+                <Label fx:id="contactLabel" text="Contact" translateX="-100.0" />
+                <Label fx:id="typeLabel" text="Type" translateX="-100.0" translateY="25.0" />
+                <Label fx:id="startLabel" text="Start Date" translateX="-100.0" translateY="50.0" />
+            <Label fx:id="endLabel" text="End Date" translateX="-100.0" translateY="85.0" />
+            <Label fx:id="customerLabel" text="Customer" translateX="-100.0" translateY="120.0" />
+                <TextField fx:id="id" disable="true" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="100.0" translateY="-100.0" />
+                <TextField fx:id="title" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="100.0" translateY="-75.0" />
+                <TextField fx:id="description" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="200.0" translateX="50.0" translateY="-50.0" />
+                <TextField fx:id="location" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="100.0" translateY="-25.0" />
+                <TextField fx:id="type" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="100.0" translateY="25.0" />
+                <ComboBox fx:id="contact" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="150.0" translateX="25.0" />
+            <DatePicker fx:id="startDate" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="150.0" translateX="25.0" translateY="50.0" />
+            <DatePicker fx:id="endDate" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="150.0" translateX="25.0" translateY="85.0" />
+            <ComboBox fx:id="customer" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="150.0" translateX="25.0" translateY="120.0" />
+            <ComboBox fx:id="startHour" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="75.0" translateX="150.0" translateY="50.0" />
+            <ComboBox fx:id="startMinute" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="75.0" translateX="225.0" translateY="50.0" />
+            <ComboBox fx:id="endHour" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="75.0" translateX="150.0" translateY="85.0" />
+            <ComboBox fx:id="endMinute" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="75.0" translateX="225.0" translateY="85.0" />
+            <ComboBox fx:id="user" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="150.0" translateX="25.0" translateY="155.0" />
+            <Label fx:id="userLabel" text="User" translateX="-100.0" translateY="155.0" />
+            </children></StackPane>
+        <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="2">
+         <children>
+                <Button fx:id="saveB" mnemonicParsing="false" onAction="#saveAppointment" text="Save" translateX="150.0" />
+                <Button fx:id="cancelB" mnemonicParsing="false" onAction="#cancelAddAppointment" text="Cancel" translateX="225.0" />
+         </children></StackPane>
+    </children>
+</GridPane>

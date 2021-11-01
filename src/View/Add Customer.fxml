@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="400.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="400.0" minHeight="10.0" prefHeight="300.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <StackPane prefHeight="150.0" prefWidth="200.0">
+         <children>
+            <Label fx:id="addLabel" text="Add Customer">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+         </children></StackPane>
+      <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="1">
+         <children>
+            <Label fx:id="idLabel" text="ID" translateX="-100.0" translateY="-100.0" />
+            <Label fx:id="nameLabel" text="Name" translateX="-100.0" translateY="-75.0" />
+            <Label fx:id="addressLabel" text="Address" translateX="-100.0" translateY="-50.0" />
+            <Label fx:id="postalLabel" text="Postal Code" translateX="-100.0" translateY="-25.0" />
+            <Label fx:id="phoneLabel" text="Phone" translateX="-100.0" />
+            <Label fx:id="countryLabel" text="Country" translateX="-100.0" translateY="25.0" />
+            <Label fx:id="divisionLabel" text="Division" translateX="-100.0" translateY="50.0" />
+            <TextField fx:id="id" disable="true" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="100.0" translateY="-100.0" />
+            <TextField fx:id="name" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="100.0" translateY="-75.0" />
+            <TextField fx:id="address" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="200.0" translateX="50.0" translateY="-50.0" />
+            <TextField fx:id="postalCode" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="100.0" translateY="-25.0" />
+            <TextField fx:id="phone" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="100.0" />
+            <ComboBox fx:id="country" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#filterDivision" prefHeight="20.0" prefWidth="150.0" translateX="25.0" translateY="25.0" />
+            <ComboBox fx:id="division" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="150.0" translateX="25.0" translateY="50.0" />
+         </children></StackPane>
+      <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="2" />
+      <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" />
+      <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <children>
+            <Button fx:id="saveB" mnemonicParsing="false" onAction="#saveCustomer" text="Save" translateX="-65.0" />
+            <Button fx:id="cancelB" mnemonicParsing="false" onAction="#cancelAddCustomer" text="Cancel" />
+         </children></StackPane>
+   </children>
+</GridPane>
